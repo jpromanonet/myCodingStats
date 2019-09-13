@@ -5,5 +5,5 @@ My personal improvement stats made with PHP, JS and SQL
 
 1. workOut
 
-*Running
-*Weight loss
+* Running
+* Weight loss
