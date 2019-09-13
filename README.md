@@ -1,2 +1,8 @@
 # myCodingStats
-My personal improvement stats made with html, js and sheet2site, using google sheets as database
+My personal improvement stats made with PHP, JS and SQL
+
+## Sections
+
+1. workOut
+  1.1 Running
+  1.2 Weight loss
