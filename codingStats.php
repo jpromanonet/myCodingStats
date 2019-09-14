@@ -107,7 +107,7 @@
 							echo "<thead class='thead-dark'>"; 
 							echo "<th>Date</th>"; 
 							echo "<th>Project</th>"; 
-							echo "<th>Code hours</th>"; 
+							echo "<th>Time</th>"; 
 							echo "<th>Commits</th>"; 
 							echo "<th>Language</th>"; 
 							echo "<th>Comments</th>"; 

@@ -86,14 +86,14 @@
         <div class='row'>
             <div class='col-sm'>
        
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 20rem;'>
                     <div class='card-header'>Total Coding Time</div>
                         <div class='card-body'>
                             <?php
                                 $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
-                                $sqlTotalTime = "SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(tiempoCorrido))) AS 'totalTime'
-                                                    FROM wo_Running";
+                                $sqlTotalTime = "SELECT CAST(SUM(codingHours) AS DECIMAL(10,1)) AS 'totalTime'
+                                                    FROM cs_CodingHours";
                                                      
                                 $res = $mysqli->query($sqlTotalTime);
                                 $res->num_rows > 0;
@@ -110,20 +110,20 @@
         
             <div class='col-sm'>
 
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
-                    <div class='card-header'>Total Run Kilometers</div>
+                <div class='card text-white bg-success mb-3' style='max-width: 20rem;'>
+                    <div class='card-header'>Total Commits</div>
                         <div class='card-body'>
                             <?php
                                 $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
-                                $sqlTotalKms = "SELECT CAST(SUM(kmCorridos) AS DECIMAL(10,1)) AS 'totalKms'
-                                                    FROM wo_Running";
+                                $sqlTotalCommits = "SELECT SUM(dailyCommits) AS 'totalCommits'
+                                                    FROM cs_CodingHours";
                                                      
-                                $res = $mysqli->query($sqlTotalKms);
+                                $res = $mysqli->query($sqlTotalCommits);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalKms']." Km</h1>";
+                                echo "<h1 class='card-title'>".$row['totalCommits']."</h1>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -134,20 +134,24 @@
 
             <div class='col-sm'>
 
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
-                    <div class='card-header'>Total Weight Loss</div>
+                <div class='card text-white bg-success mb-3' style='max-width: 20rem;'>
+                    <div class='card-header'>Most Used Language</div>
                         <div class='card-body'>
                             <?php
                                 $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
-                                $sqlTotalWl = "SELECT CAST(SUM(diferenciaPeso) AS DECIMAL(10,2)) AS 'totalWl'
-                                                    FROM wo_WeightLoss";
+                                $sqlMostUsedLang = "SELECT dayLanguage AS 'totalLang', 
+	                                                         FLOOR(SUM(codingHours)) as 'totalHours'
+       		                                                    FROM cs_CodingHours
+            	                                                  WHERE codingHours != 1307
+        			                                                    GROUP BY codingHours
+                		                                                ORDER BY totalHours DESC";
                                                      
-                                $res = $mysqli->query($sqlTotalWl);
+                                $res = $mysqli->query($sqlMostUsedLang);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalWl']." Kg</h1>";
+                                echo "<h1 class='card-title'>".$row['totalLang']."</h1>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -158,7 +162,7 @@
         
         </div>
     </div><!-- /container -->
-
+    </br>
     <div class='container'>
         <h1>Work Out</h1>
         <div class='row'>
@@ -170,14 +174,14 @@
                             <?php
                                 $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
-                                $sqlTotalTime = "SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(tiempoCorrido))) AS 'totalTime'
+                                $sqlTotalTime = "SELECT CAST(SUM(tiempoCorrido) AS DECIMAL(10,1)) AS 'totalTime'
                                                     FROM wo_Running";
                                                      
                                 $res = $mysqli->query($sqlTotalTime);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalTime']." Hs</h1>";
+                                echo "<h1 class='card-title'>".$row['totalTime']." Min</h1>";
 
                                 $mysqli->close(); 
                             ?> 
