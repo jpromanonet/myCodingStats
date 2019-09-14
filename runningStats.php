@@ -15,19 +15,61 @@
 
   <body>
 
-    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-        <a class='navbar-brand' href='#'>jpStats</a>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+        <a class='navbar-brand' href='http://jpromano.net'>Jpromano.net</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarColor03' aria-controls='navbarColor03' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
         </button>
       
         <div class='collapse navbar-collapse' id='navbarColor03'>
           <ul class='navbar-nav ml-auto'>
-            <li class='nav-item active'>
-              <a class='nav-link' href='#'>Home <span class='sr-only'>(current)</span></a>
+            <li class='nav-item'>
+              <a class='nav-link' href='http://jpromano.net/stats'>Home <span class='sr-only'>(current)</span></a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='#'>How To</a>
+              <a class='nav-link' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Study
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">University</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Languages</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Programming</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reading
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Reading Hours</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Read Books</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Workout
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item active" href="http://jpromano.net/stats/runningStats.php">Running</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Weight Loss</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Random
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Mate</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Blog Posts</a>
+                </div>
             </li>
             <li class='nav-item'>
               <a class='nav-link' href='#'>About</a>
@@ -35,6 +77,7 @@
           </ul>
         </div>
     </nav>
+
 
     </br>
     </br>
@@ -48,7 +91,7 @@
         <div class='row'>
             <div class='col-sm'>
 				<?php
-					
+					$mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats"); 
 
 					if ($mysqli === false) { 
 						die("ERROR: Could not connect. " 
@@ -86,6 +129,11 @@
         </div>
     </div><!-- /container -->
 
+    <footer class="page-footer font-small blue pt-4 bg-light fixed-bottom">
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+      </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

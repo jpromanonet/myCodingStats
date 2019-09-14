@@ -15,7 +15,7 @@
 
   <body>
 
-    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
         <a class='navbar-brand' href='http://jpromano.net'>Jpromano.net</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarColor03' aria-controls='navbarColor03' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
@@ -23,11 +23,11 @@
       
         <div class='collapse navbar-collapse' id='navbarColor03'>
           <ul class='navbar-nav ml-auto'>
-            <li class='nav-item active'>
+            <li class='nav-item'>
               <a class='nav-link' href='http://jpromano.net/stats'>Home <span class='sr-only'>(current)</span></a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
+              <a class='nav-link active' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,91 +78,65 @@
         </div>
     </nav>
 
+
     </br>
     </br>
 
     <div class='container'>
-        <h1>Work Out</h1>
+        <h1 class="bg-info">
+			<center>
+				<b>Coding Metrics!</b>
+			</center>	
+		</h1>
         <div class='row'>
             <div class='col-sm'>
-       
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
-                    <div class='card-header'>Total Running Time</div>
-                        <div class='card-body'>
-                            <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+				<?php
+					$mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats"); 
 
-                                $sqlTotalTime = "SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(tiempoCorrido))) AS 'totalTime'
-                                                    FROM wo_Running";
-                                                     
-                                $res = $mysqli->query($sqlTotalTime);
-                                $res->num_rows > 0;
-                                $row = $res->fetch_array();
+					if ($mysqli === false) { 
+						die("ERROR: Could not connect. " 
+													.$mysqli->connect_error); 
+						} 
 
-                                echo "<h1 class='card-title'>".$row['totalTime']." Hs</h1>";
+					$sql = "SELECT *
+								FROM cs_CodingHours";
 
-                                $mysqli->close(); 
-                            ?> 
-                        </div>
-                </div>
-
-            </div>
-        
-            <div class='col-sm'>
-
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
-                    <div class='card-header'>Total Run Kilometers</div>
-                        <div class='card-body'>
-                            <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
-
-                                $sqlTotalKms = "SELECT CAST(SUM(kmCorridos) AS DECIMAL(10,1)) AS 'totalKms'
-                                                    FROM wo_Running";
-                                                     
-                                $res = $mysqli->query($sqlTotalKms);
-                                $res->num_rows > 0;
-                                $row = $res->fetch_array();
-
-                                echo "<h1 class='card-title'>".$row['totalKms']." Km</h1>";
-
-                                $mysqli->close(); 
-                            ?> 
-                        </div>
-                </div>
-
-            </div>
-
-            <div class='col-sm'>
-
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
-                    <div class='card-header'>Total Weight Loss</div>
-                        <div class='card-body'>
-                            <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
-
-                                $sqlTotalWl = "SELECT CAST(SUM(diferenciaPeso) AS DECIMAL(10,2)) AS 'totalWl'
-                                                    FROM wo_WeightLoss";
-                                                     
-                                $res = $mysqli->query($sqlTotalWl);
-                                $res->num_rows > 0;
-                                $row = $res->fetch_array();
-
-                                echo "<h1 class='card-title'>".$row['totalWl']." Kg</h1>";
-
-                                $mysqli->close(); 
-                            ?> 
-                        </div>
-                </div>
-
-               </div>
-        
+					if ($res = $mysqli->query($sql)) { 
+						if ($res->num_rows > 0) { 
+							echo "<table class='table'>"; 
+							echo "<thead class='thead-dark'>"; 
+							echo "<th>Date</th>"; 
+							echo "<th>Project</th>"; 
+							echo "<th>Code hours</th>"; 
+							echo "<th>Commits</th>"; 
+							echo "<th>Language</th>"; 
+							echo "<th>Comments</th>"; 
+							echo "</thead>"; 
+						while ($row = $res->fetch_array()) 
+							{ 
+								echo "<tr>"; 
+								echo "<td>".$row['fecha']."</td>"; 
+								echo "<td>".$row['workProject']."</td>"; 
+								echo "<td>".$row['codingHours']." Hs</td>";
+								echo "<td>".$row['dailyCommits']."</td>";
+								echo "<td>".$row['dayLanguage']."</td>";
+								echo "<td>".$row['dayComments']."</td>";  
+								echo "</tr>"; 
+							} 
+							echo "</table>"; 
+							$res->free(); 
+						}  
+					}
+					$mysqli->close(); 
+				?> 
+			</div>
         </div>
     </div><!-- /container -->
 
     <footer class="page-footer font-small blue pt-4 bg-light fixed-bottom">
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
           <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript

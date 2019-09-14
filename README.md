@@ -1,4 +1,5 @@
 # myCodingStats
+
 My personal improvement stats made with PHP, JS and SQL
 
 ## Sections
@@ -7,23 +8,23 @@ My personal improvement stats made with PHP, JS and SQL
 
 1. workOut
 
-* Running
-* Weight loss
+- Running
+- Weight loss
 
 2. Coding
 
-* Coding Hours
-* Commits
-
 3. Study
 
-* University
-* Programming
-* Languages
+- University
+- Programming
+- Languages
 
 4. Reading
 
-* Hours Reading
-* Read Books 
+- Hours Reading
+- Read Books
 
-5. Mate
+5. Random
+
+- Mate
+- Blog Posts
