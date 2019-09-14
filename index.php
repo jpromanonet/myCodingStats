@@ -82,6 +82,84 @@
     </br>
 
     <div class='container'>
+        <h1>Coding</h1>
+        <div class='row'>
+            <div class='col-sm'>
+       
+                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                    <div class='card-header'>Total Coding Time</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalTime = "SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(tiempoCorrido))) AS 'totalTime'
+                                                    FROM wo_Running";
+                                                     
+                                $res = $mysqli->query($sqlTotalTime);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<h1 class='card-title'>".$row['totalTime']." Hs</h1>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+        
+            <div class='col-sm'>
+
+                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                    <div class='card-header'>Total Run Kilometers</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalKms = "SELECT CAST(SUM(kmCorridos) AS DECIMAL(10,1)) AS 'totalKms'
+                                                    FROM wo_Running";
+                                                     
+                                $res = $mysqli->query($sqlTotalKms);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<h1 class='card-title'>".$row['totalKms']." Km</h1>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+
+            <div class='col-sm'>
+
+                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                    <div class='card-header'>Total Weight Loss</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalWl = "SELECT CAST(SUM(diferenciaPeso) AS DECIMAL(10,2)) AS 'totalWl'
+                                                    FROM wo_WeightLoss";
+                                                     
+                                $res = $mysqli->query($sqlTotalWl);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<h1 class='card-title'>".$row['totalWl']." Kg</h1>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+               </div>
+        
+        </div>
+    </div><!-- /container -->
+
+    <div class='container'>
         <h1>Work Out</h1>
         <div class='row'>
             <div class='col-sm'>
@@ -160,8 +238,8 @@
     </div><!-- /container -->
 
     <footer class="page-footer font-small blue pt-4 bg-light fixed-bottom">
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        <div class="footer-copyright text-center py-3">2019 MIT License |
+          <a href="https://github.com/jpromanonet/myProgressStats" target="_blank"> Github</a>
         </div>
     </footer>
 

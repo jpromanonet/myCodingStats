@@ -134,8 +134,8 @@
     </div><!-- /container -->
 
     <footer class="page-footer font-small blue pt-4 bg-light fixed-bottom">
-      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        <div class="footer-copyright text-center py-3">2019 MIT License |
+          <a href="https://github.com/jpromanonet/myProgressStats" target="_blank"> Github</a>
       </div>
     </footer>
 
