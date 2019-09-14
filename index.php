@@ -48,7 +48,6 @@
                     <div class='card-header'>Total Running Time</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
                                 $sqlTotalTime = "SELECT FLOOR(SUM(tiempoCorrido)) AS 'totalTime'
                                                     FROM wo_Running";
@@ -72,7 +71,6 @@
                     <div class='card-header'>Total Run Kilometers</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
                                 $sqlTotalKms = "SELECT CAST(SUM(kmCorridos) AS DECIMAL(10,1)) AS 'totalKms'
                                                     FROM wo_Running";
@@ -96,7 +94,6 @@
                     <div class='card-header'>Total Weight Loss</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
 
                                 $sqlTotalWl = "SELECT CAST(SUM(diferenciaPeso) AS DECIMAL(10,2)) AS 'totalWl'
                                                     FROM wo_WeightLoss";

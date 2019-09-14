@@ -48,7 +48,7 @@
         <div class='row'>
             <div class='col-sm'>
 				<?php
-					$mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats"); 
+					
 
 					if ($mysqli === false) { 
 						die("ERROR: Could not connect. " 
