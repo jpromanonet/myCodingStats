@@ -88,7 +88,7 @@
             <div class='col-md'>
 
                 <div class='card text-white bg-success mb-3' style='max-width: 100%;'>
-                    <div class='card-header'>Total Commits</div>
+                    <div class='card-header'>Total Commits on GitHub</div>
                         <div class='card-body'>
                             <?php
                                 $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
