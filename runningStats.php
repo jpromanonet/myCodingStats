@@ -29,27 +29,14 @@
             <li class='nav-item'>
               <a class='nav-link' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Study
-              </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">University</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Languages</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Programming</a>
-                </div>
+            <li class='nav-item'>
+              <a class='nav-link' href='http://jpromano.net/stats/studyStats.php'>Study</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Reading
-              </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Reading Hours</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Read Books</a>
-                </div>
+            <li class='nav-item'>
+              <a class='nav-link' href='http://jpromano.net/stats/readingStats.php'>Reading</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='http://jpromano.net/stats/blogStats.php'>Blog</a>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,18 +48,8 @@
                   <a class="dropdown-item" href="#">Weight Loss</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Random
-              </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Mate</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Blog Posts</a>
-                </div>
-            </li>
             <li class='nav-item'>
-              <a class='nav-link' href='#'>About</a>
+              <a class='nav-link' href='http://jpromano.net/stats/about.html'>About</a>
             </li>
           </ul>
         </div>
