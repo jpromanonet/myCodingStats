@@ -73,7 +73,8 @@
 						} 
 
 					$sql = "SELECT *
-								FROM wo_Running";
+                    FROM wo_Running
+                      ORDER BY fecha ASC";
 
 					if ($res = $conn->query($sql)) { 
 						if ($res->num_rows > 0) { 

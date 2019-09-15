@@ -73,7 +73,8 @@
 						} 
 
 					$sql = "SELECT *
-								FROM blog_General";
+                    FROM blog_General
+                      ORDER BY fecha ASC";
 
 					if ($res = $conn->query($sql)) { 
 						if ($res->num_rows > 0) { 

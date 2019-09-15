@@ -73,7 +73,8 @@
 						} 
 
 					$sql = "SELECT *
-								FROM wo_WeightLoss";
+                    FROM wo_WeightLoss
+                      ORDER BY fecha ASC";
 
 					if ($res = $conn->query($sql)) { 
 						if ($res->num_rows > 0) { 

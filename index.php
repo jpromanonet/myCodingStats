@@ -79,7 +79,7 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlTotalTime = "SELECT CAST(SUM(codingHours) AS DECIMAL(10,1)) AS 'totalTime'
+                                $sqlTotalTime = "SELECT FLOOR(SUM(codingHours)) AS 'totalTime'
                                                     FROM cs_CodingHours";
                                                      
                                 $res = $conn->query($sqlTotalTime);
@@ -161,7 +161,7 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlTotalTime = "SELECT CAST(SUM(studyHours) AS DECIMAL(10,1)) AS 'totalTime'
+                                $sqlTotalTime = "SELECT FLOOR(SUM(studyHours)) AS 'totalTime'
                                                     FROM st_General";
                                                      
                                 $res = $conn->query($sqlTotalTime);
@@ -217,7 +217,7 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlTotalTime = "SELECT CAST(SUM(tiempoLectura) AS DECIMAL(10,1)) AS 'totalTime'
+                                $sqlTotalTime = "SELECT FLOOR(SUM(tiempoLectura)) AS 'totalTime'
                                                     FROM rd_General";
                                                      
                                 $res = $conn->query($sqlTotalTime);
@@ -322,7 +322,7 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlTotalWriting = "SELECT CAST(SUM(tiempoEscritura) AS DECIMAL(10,1)) AS 'totalWriting'
+                                $sqlTotalWriting = "SELECT FLOOR(SUM(tiempoEscritura)) AS 'totalWriting'
                                                     FROM blog_General";
                                                      
                                 $res = $conn->query($sqlTotalWriting);
@@ -377,7 +377,7 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlTotalTime = "SELECT CAST(SUM(tiempoCorrido) AS DECIMAL(10,1)) AS 'totalTime'
+                                $sqlTotalTime = "SELECT FLOOR(SUM(tiempoCorrido)) AS 'totalTime'
                                                     FROM wo_Running";
                                                      
                                 $res = $conn->query($sqlTotalTime);
