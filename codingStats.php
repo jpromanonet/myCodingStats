@@ -27,29 +27,29 @@
               <a class='nav-link' href='http://stats.jpromano.net'>Home <span class='sr-only'>(current)</span></a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link active' href='http://stats.jpromano.net/codingStats.php'>Coding</a>
+              <a class='nav-link active' href='./codingStats.php'>Coding</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/studyStats.php'>Study</a>
+              <a class='nav-link' href='./studyStats.php'>Study</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/readingStats.php'>Reading</a>
+              <a class='nav-link' href='./readingStats.php'>Reading</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/blogStats.php'>Blog</a>
+              <a class='nav-link' href='./blogStats.php'>Blog</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Workout
               </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="http://stats.jpromano.net/runningStats.php">Running</a>
+                  <a class="dropdown-item" href="./runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="http://stats.jpromano.net/wlStats.php">Weight Loss</a>
+                  <a class="dropdown-item" href="./wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/about.html'>About</a>
+              <a class='nav-link' href='./about.html'>About</a>
             </li>
           </ul>
         </div>
@@ -97,22 +97,32 @@
             <div class='col-md'>
                 <center>
                   <h4 class="bg-info">
-                    Code editors over last year
+                    Code editors over last
+                      <select class="custom-select custom-select-sm" name="codeEditors" onChange="document.getElementById('editors').src = this.options[this.selectedIndex].value">
+                        <option value="https://wakatime.com/share/@jpromanonet/2b03d6e0-875a-474e-a859-8a8cfbd6dc35.svg">Week</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/68f9d3a7-6b87-4cbd-a1cc-557c7817860d.svg">Month</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/aee5689d-8716-4514-b2c3-ab04cfe8f18a.svg">Year</option>
+                      </select>
                   </h4>
                 </center>
                 <figure>
-                  <embed src="https://wakatime.com/share/@jpromanonet/aee5689d-8716-4514-b2c3-ab04cfe8f18a.svg"></embed>
+                  <embed id="editors" src="https://wakatime.com/share/@jpromanonet/2b03d6e0-875a-474e-a859-8a8cfbd6dc35.svg"></embed>
                 </figure>
             </div>
         
             <div class='col-md'>
                 <center>
                   <h4 class="bg-info">
-                    OS over the last year
+                    OS over the last
+                      <select class="custom-select custom-select-sm" name="osUse" onChange="document.getElementById('os').src = this.options[this.selectedIndex].value">
+                        <option value="https://wakatime.com/share/@jpromanonet/2e267773-a87d-45df-a775-c045a679ae88.svg">Week</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/1a457cd1-d2cb-49fa-85a6-fbd4f9a6f550.svg">Month</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/87a8f35d-e825-4685-8b8d-9d571bac394b.svg">Year</option>
+                      </select>
                   </h4>
                 </center>
                 <figure>
-                  <embed src="https://wakatime.com/share/@jpromanonet/87a8f35d-e825-4685-8b8d-9d571bac394b.svg"></embed>
+                  <embed id="os" src="https://wakatime.com/share/@jpromanonet/2e267773-a87d-45df-a775-c045a679ae88.svg"></embed>
                 </figure>
             </div>
         </div>

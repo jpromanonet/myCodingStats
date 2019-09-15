@@ -27,29 +27,29 @@
               <a class='nav-link' href='http://stats.jpromano.net'>Home <span class='sr-only'>(current)</span></a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/codingStats.php'>Coding</a>
+              <a class='nav-link' href='./codingStats.php'>Coding</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link active' href='http://stats.jpromano.net/studyStats.php'>Study</a>
+              <a class='nav-link active' href='./studyStats.php'>Study</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/readingStats.php'>Reading</a>
+              <a class='nav-link' href='./readingStats.php'>Reading</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/blogStats.php'>Blog</a>
+              <a class='nav-link' href='./blogStats.php'>Blog</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Workout
               </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="http://stats.jpromano.net/runningStats.php">Running</a>
+                  <a class="dropdown-item" href="./runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="http://stats.jpromano.net/wlStats.php">Weight Loss</a>
+                  <a class="dropdown-item" href="./wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://stats.jpromano.net/about.html'>About</a>
+              <a class='nav-link' href='./about.html'>About</a>
             </li>
           </ul>
         </div>
