@@ -195,7 +195,8 @@
             </div>
         </div>
     </div><!-- /container -->
-    </br><div class='container'>
+    </br>
+    <div class='container'>
         <h1>Reading</h1>
         <div class='row'>
             <div class='col-md'>
@@ -265,6 +266,85 @@
                                 $row = $res->fetch_array();
 
                                 echo "<center><h4 class='card-title'>".$row['maxBook']."</h4></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+               </div>
+        
+        </div>
+    </div><!-- /container -->
+    </br>
+    <div class='container'>
+        <h1>Blog & Mate</h1>
+        <div class='row'>
+            <div class='col-md'>
+       
+                <div class='card text-white bg-secondary mb-3 h-100' style='max-width: 100%;'>
+                    <div class='card-header'>Total Mate Times</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalMateTimes = "SELECT SUM(cantidadMate) AS 'totalMateTimes'
+                                                        FROM blog_General";
+                                                     
+                                $res = $mysqli->query($sqlTotalMateTimes);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['totalMateTimes']." Times</h1></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+        
+            <div class='col-md'>
+
+                <div class='card text-white bg-secondary mb-3 h-100' style='max-width: 100%;'>
+                    <div class='card-header'>Total Writing Times</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalWriting = "SELECT CAST(SUM(tiempoEscritura) AS DECIMAL(10,1)) AS 'totalWriting'
+                                                    FROM blog_General";
+                                                     
+                                $res = $mysqli->query($sqlTotalWriting);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['totalWriting']." Hs</h1></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+
+            <div class='col-md'>
+
+                <div class='card text-white bg-secondary mb-3 h-100' style='max-width: 100%;'>
+                    <div class='card-header'>Total Posts</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalPosts = "SELECT COUNT(nombrePublicacion) as totalPosts
+                                                  FROM blog_General
+                                                    WHERE esNuevo = 1";
+                                                     
+                                $res = $mysqli->query($sqlTotalPosts);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['totalPosts']."</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
