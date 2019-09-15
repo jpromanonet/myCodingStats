@@ -51,9 +51,9 @@
           </ul>
         </div>
     </nav>
-    <div class="bg-light" style="max-width: 100%; height: 200px; padding: 40px 100px 15px 100px;">
+    <div class="bg-light" style="max-width: 100%; height: 15rem; padding: 1em 3em 1em 3em;">
         <center>
-            As i am a freak about metrics and continuous improvement, i made this little side project to keep track of the stuff i'm into like how many hours i code, how many commits i do, how many pages i read and for how many hours, also i started using some services to create some charts, enjoy! 
+            As i am a freak about metrics and continuous improvement, i made this little side project to keep track of the stuff i'm into like how many hours i code, how many commits i do, how many pages i read and for how many hours, etc.
             <br>
             <br>
             <p>
