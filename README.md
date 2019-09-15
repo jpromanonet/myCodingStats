@@ -15,16 +15,6 @@ My personal improvement stats made with PHP, JS and SQL
 
 3. Study
 
-- University
-- Programming
-- Languages
-
 4. Reading
 
-- Hours Reading
-- Read Books
-
-5. Random
-
-- Mate
-- Blog Posts
+5. Blog
