@@ -58,7 +58,31 @@
 
     </br>
     </br>
-
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md'>
+                <center>
+                  <h4 class="bg-info">
+                    Coding Activity over last 30 days
+                  </h4>
+                </center>
+                <figure>
+                  <embed src="https://wakatime.com/share/@jpromanonet/5a57d7ea-d7c8-4483-b81e-485cd970de3a.svg"></embed>
+                </figure>
+            </div>
+        
+            <div class='col-md'>
+                <center>
+                  <h4 class="bg-info">
+                    Languages over last year
+                  </h4>
+                </center>
+                <figure>
+                  <embed src="https://wakatime.com/share/@jpromanonet/33d9205a-4c25-43b8-8b80-a330d4365464.svg"></embed>
+                </figure>
+            </div>
+        </div>
+    </div><!-- /container -->
     <div class='container'>
         <h1 class="bg-info">
 			<center>
@@ -86,8 +110,7 @@
 							echo "<th>Project</th>"; 
 							echo "<th>Time</th>"; 
 							echo "<th>Commits</th>"; 
-							echo "<th>Language</th>"; 
-							echo "<th>Comments</th>"; 
+							echo "<th>Language</th>";
 							echo "</thead>"; 
 						while ($row = $res->fetch_array()) 
 							{ 
@@ -96,8 +119,7 @@
 								echo "<td>".$row['workProject']."</td>"; 
 								echo "<td>".$row['codingHours']." Hs</td>";
 								echo "<td>".$row['dailyCommits']."</td>";
-								echo "<td>".$row['dayLanguage']."</td>";
-								echo "<td>".$row['dayComments']."</td>";  
+								echo "<td>".$row['dayLanguage']."</td>";  
 								echo "</tr>"; 
 							} 
 							echo "</table>"; 
