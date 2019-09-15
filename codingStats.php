@@ -63,22 +63,31 @@
             <div class='col-md'>
                 <center>
                   <h4 class="bg-info">
-                    Coding Activity over last 30 days
+                    Coding Activity over last 
+                      <select class="custom-select custom-select-sm" name="codeActivity" onChange="document.getElementById('codeActivityLink').src = this.options[this.selectedIndex].value">
+                        <option value="https://wakatime.com/share/@jpromanonet/ed7de4ca-802d-4c59-9cf8-78313d95298d.svg">Week</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/adae334f-dc94-415d-afea-26f92601ebe7.svg">Month</option>
+                      </select>
                   </h4>
                 </center>
                 <figure>
-                  <embed src="https://wakatime.com/share/@jpromanonet/5a57d7ea-d7c8-4483-b81e-485cd970de3a.svg"></embed>
+                  <embed id="codeActivityLink" src="https://wakatime.com/share/@jpromanonet/ed7de4ca-802d-4c59-9cf8-78313d95298d.svg"></embed>
                 </figure>
             </div>
         
             <div class='col-md'>
                 <center>
                   <h4 class="bg-info">
-                    Languages over last year
+                    Languages over last 
+                      <select class="custom-select custom-select-sm" name="languageChart" onChange="document.getElementById('languagesUse').src = this.options[this.selectedIndex].value">
+                        <option value="https://wakatime.com/share/@jpromanonet/063fe7c7-341b-4fb8-b3a4-9b17545e22e3.svg">Week</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/ec41c080-41c5-4007-a536-884b5594c79d.svg">Month</option>
+                        <option value="https://wakatime.com/share/@jpromanonet/33d9205a-4c25-43b8-8b80-a330d4365464.svg">Year</option>
+                      </select>
                   </h4>
                 </center>
                 <figure>
-                  <embed src="https://wakatime.com/share/@jpromanonet/33d9205a-4c25-43b8-8b80-a330d4365464.svg"></embed>
+                  <embed id="languagesUse" src="https://wakatime.com/share/@jpromanonet/063fe7c7-341b-4fb8-b3a4-9b17545e22e3.svg"></embed>
                 </figure>
             </div>
         </div>
@@ -168,6 +177,5 @@
     <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>
-
 </body>
 </html>
