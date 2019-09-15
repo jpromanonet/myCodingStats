@@ -45,7 +45,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="wlStats.php">Weight Loss</a>
+                  <a class="dropdown-item" href="http://jpromano.net/stats/wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
@@ -185,7 +185,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<center><h1 class='card-title'>".$row['firstSubject']."</h1></center>";
+                                echo "<center><h4 class='card-title'>".$row['firstSubject']."</h4></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -193,6 +193,86 @@
                 </div>
 
             </div>
+        </div>
+    </div><!-- /container -->
+    </br><div class='container'>
+        <h1>Reading</h1>
+        <div class='row'>
+            <div class='col-md'>
+       
+                <div class='card text-white bg-info mb-3 h-100' style='max-width: 100%;'>
+                    <div class='card-header'>Total Reading Time</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalTime = "SELECT CAST(SUM(tiempoLectura) AS DECIMAL(10,1)) AS 'totalTime'
+                                                    FROM rd_General";
+                                                     
+                                $res = $mysqli->query($sqlTotalTime);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['totalTime']." Hs</h1></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+        
+            <div class='col-md'>
+
+                <div class='card text-white bg-info mb-3 h-100' style='max-width: 100%;'>
+                    <div class='card-header'>Total Read Pages</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalPages = "SELECT SUM(paginasLeidas) AS 'totalPages'
+                                                    FROM rd_General";
+                                                     
+                                $res = $mysqli->query($sqlTotalPages);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['totalPages']."</h1></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+
+            <div class='col-md'>
+
+                <div class='card text-white bg-info mb-3 h-100' style='max-width: 100%;'>
+                    <div class='card-header'>Longest Book until now</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlMaxBook = "SELECT nombreLibro AS 'maxBook'
+	                                              FROM rd_General
+                                                  	WHERE paginasTotales IN 
+                                                      	(SELECT MAX(paginasTotales)
+                                                           	FROM rd_General)";
+                                                     
+                                $res = $mysqli->query($sqlMaxBook);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h4 class='card-title'>".$row['maxBook']."</h4></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+               </div>
+        
         </div>
     </div><!-- /container -->
     </br>
