@@ -63,7 +63,7 @@
         <div class='row'>
             <div class='col-md'>
        
-                <div class='card text-white bg-success mb-3' style='max-width: 95%;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 100%;'>
                     <div class='card-header'>Total Coding Time</div>
                         <div class='card-body'>
                             <?php
@@ -87,7 +87,7 @@
         
             <div class='col-md'>
 
-                <div class='card text-white bg-success mb-3' style='max-width: 95%;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 100%;'>
                     <div class='card-header'>Total Commits</div>
                         <div class='card-body'>
                             <?php
@@ -111,7 +111,7 @@
 
             <div class='col-md'>
 
-                <div class='card text-white bg-success mb-3' style='max-width: 95%;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 100%;'>
                     <div class='card-header'>Hottest Language Now</div>
                         <div class='card-body'>
                             <?php
@@ -145,7 +145,7 @@
         <div class='row'>
             <div class='col-md'>
        
-                <div class='card text-white bg-primary mb-3 h-100' style='max-width: 95%;'>
+                <div class='card text-white bg-primary mb-3 h-100' style='max-width: 100%;'>
                     <div class='card-header'>Total Study Time</div>
                         <div class='card-body'>
                             <?php
@@ -169,7 +169,7 @@
         
             <div class='col-md'>
 
-                <div class='card text-white bg-primary mb-3 h-100' style='max-width: 95%;'>
+                <div class='card text-white bg-primary mb-3 h-100' style='max-width: 100%;'>
                     <div class='card-header'>First Subject Now</div>
                         <div class='card-body'>
                             <?php
@@ -201,7 +201,7 @@
         <div class='row'>
             <div class='col-md'>
        
-                <div class='card text-white bg-Warning mb-3' style='max-width: 95%;'>
+                <div class='card text-white bg-Warning mb-3' style='max-width: 100%;'>
                     <div class='card-header'>Total Running Time</div>
                         <div class='card-body'>
                             <?php
@@ -225,7 +225,7 @@
         
             <div class='col-md'>
 
-                <div class='card text-white bg-Warning mb-3' style='max-width: 95%;'>
+                <div class='card text-white bg-Warning mb-3' style='max-width: 100%;'>
                     <div class='card-header'>Total Run Kilometers</div>
                         <div class='card-body'>
                             <?php
@@ -249,7 +249,7 @@
 
             <div class='col-md'>
 
-                <div class='card text-white bg-Warning mb-3' style='max-width: 95%;'>
+                <div class='card text-white bg-Warning mb-3' style='max-width: 100%;'>
                     <div class='card-header'>Total Weight Loss</div>
                         <div class='card-body'>
                             <?php
