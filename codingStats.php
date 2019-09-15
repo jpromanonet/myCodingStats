@@ -136,17 +136,17 @@
         <div class='row'>
             <div class='col-sm'>
 				<?php
-					$mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats"); 
+					include('connectDataBase.php'); 
 
-					if ($mysqli === false) { 
+					if ($conn === false) { 
 						die("ERROR: Could not connect. " 
-													.$mysqli->connect_error); 
+													.$conn->connect_error); 
 						} 
 
 					$sql = "SELECT *
 								FROM cs_CodingHours";
 
-					if ($res = $mysqli->query($sql)) { 
+					if ($res = $conn->query($sql)) { 
 						if ($res->num_rows > 0) { 
 							echo "<table class='table'>"; 
 							echo "<thead class='thead-dark'>"; 
@@ -170,7 +170,7 @@
 							$res->free(); 
 						}  
 					}
-					$mysqli->close(); 
+					$conn->close(); 
 				?> 
 			</div>
         </div>

@@ -65,18 +65,18 @@
                     <div class='card-header'>Total Coding Time</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalTime = "SELECT CAST(SUM(codingHours) AS DECIMAL(10,1)) AS 'totalTime'
                                                     FROM cs_CodingHours";
                                                      
-                                $res = $mysqli->query($sqlTotalTime);
+                                $res = $conn->query($sqlTotalTime);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalTime']." Hs</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -89,18 +89,18 @@
                     <div class='card-header'>Total Commits on GitHub</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalCommits = "SELECT SUM(dailyCommits) AS 'totalCommits'
                                                     FROM cs_CodingHours";
                                                      
-                                $res = $mysqli->query($sqlTotalCommits);
+                                $res = $conn->query($sqlTotalCommits);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalCommits']."</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class='card-header'>Hottest Language Now</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlMostUsedLang = "SELECT dayLanguage AS 'totalLang', 
 	                                                         FLOOR(SUM(codingHours)) as 'totalHours'
@@ -122,13 +122,13 @@
         			                                                    GROUP BY codingHours
                 		                                                ORDER BY totalHours DESC";
                                                      
-                                $res = $mysqli->query($sqlMostUsedLang);
+                                $res = $conn->query($sqlMostUsedLang);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalLang']."</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -147,18 +147,18 @@
                     <div class='card-header'>Total Study Time</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalTime = "SELECT CAST(SUM(studyHours) AS DECIMAL(10,1)) AS 'totalTime'
                                                     FROM st_General";
                                                      
-                                $res = $mysqli->query($sqlTotalTime);
+                                $res = $conn->query($sqlTotalTime);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalTime']." Hs</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -171,7 +171,7 @@
                     <div class='card-header'>First Subject Now</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlFirstSubject = "SELECT studySubject AS 'firstSubject', 
 	                                                         FLOOR(SUM(studyHours)) as 'totalHours'
@@ -179,13 +179,13 @@
         			                                                  GROUP BY studyHours
                 		                                              ORDER BY totalHours DESC";
                                                      
-                                $res = $mysqli->query($sqlFirstSubject);
+                                $res = $conn->query($sqlFirstSubject);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h4 class='card-title'>".$row['firstSubject']."</h4></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -203,18 +203,18 @@
                     <div class='card-header'>Total Reading Time</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalTime = "SELECT CAST(SUM(tiempoLectura) AS DECIMAL(10,1)) AS 'totalTime'
                                                     FROM rd_General";
                                                      
-                                $res = $mysqli->query($sqlTotalTime);
+                                $res = $conn->query($sqlTotalTime);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalTime']." Hs</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -227,18 +227,18 @@
                     <div class='card-header'>Total Read Pages</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalPages = "SELECT SUM(paginasLeidas) AS 'totalPages'
                                                     FROM rd_General";
                                                      
-                                $res = $mysqli->query($sqlTotalPages);
+                                $res = $conn->query($sqlTotalPages);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalPages']."</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -251,7 +251,7 @@
                     <div class='card-header'>Longest Book until now</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlMaxBook = "SELECT nombreLibro AS 'maxBook'
 	                                              FROM rd_General
@@ -259,13 +259,13 @@
                                                       	(SELECT MAX(paginasTotales)
                                                            	FROM rd_General)";
                                                      
-                                $res = $mysqli->query($sqlMaxBook);
+                                $res = $conn->query($sqlMaxBook);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h4 class='card-title'>".$row['maxBook']."</h4></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -284,18 +284,18 @@
                     <div class='card-header'>Total Mate Times</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalMateTimes = "SELECT SUM(cantidadMate) AS 'totalMateTimes'
                                                         FROM blog_General";
                                                      
-                                $res = $mysqli->query($sqlTotalMateTimes);
+                                $res = $conn->query($sqlTotalMateTimes);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalMateTimes']." Times</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -308,18 +308,18 @@
                     <div class='card-header'>Total Writing Times</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalWriting = "SELECT CAST(SUM(tiempoEscritura) AS DECIMAL(10,1)) AS 'totalWriting'
                                                     FROM blog_General";
                                                      
-                                $res = $mysqli->query($sqlTotalWriting);
+                                $res = $conn->query($sqlTotalWriting);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalWriting']." Hs</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -332,19 +332,19 @@
                     <div class='card-header'>Total Posts</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalPosts = "SELECT COUNT(nombrePublicacion) as totalPosts
                                                   FROM blog_General
                                                     WHERE esNuevo = 1";
                                                      
-                                $res = $mysqli->query($sqlTotalPosts);
+                                $res = $conn->query($sqlTotalPosts);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalPosts']."</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -363,18 +363,18 @@
                     <div class='card-header'>Total Running Time</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalTime = "SELECT CAST(SUM(tiempoCorrido) AS DECIMAL(10,1)) AS 'totalTime'
                                                     FROM wo_Running";
                                                      
-                                $res = $mysqli->query($sqlTotalTime);
+                                $res = $conn->query($sqlTotalTime);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalTime']." Min</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -387,18 +387,18 @@
                     <div class='card-header'>Total Run Kilometers</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalKms = "SELECT CAST(SUM(kmCorridos) AS DECIMAL(10,1)) AS 'totalKms'
                                                     FROM wo_Running";
                                                      
-                                $res = $mysqli->query($sqlTotalKms);
+                                $res = $conn->query($sqlTotalKms);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalKms']." Km</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
@@ -411,18 +411,18 @@
                     <div class='card-header'>Total Weight Loss</div>
                         <div class='card-body'>
                             <?php
-                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+                                include('connectDataBase.php');
 
                                 $sqlTotalWl = "SELECT CAST(SUM(diferenciaPeso) AS DECIMAL(10,2)) AS 'totalWl'
                                                     FROM wo_WeightLoss";
                                                      
-                                $res = $mysqli->query($sqlTotalWl);
+                                $res = $conn->query($sqlTotalWl);
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
                                 echo "<center><h1 class='card-title'>".$row['totalWl']." Kg</h1></center>";
 
-                                $mysqli->close(); 
+                                $conn->close(); 
                             ?> 
                         </div>
                 </div>
