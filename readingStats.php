@@ -48,9 +48,6 @@
                   <a class="dropdown-item" href="./wlStats.php">Weight Loss</a>
                 </div>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link' href='./about.html'>About</a>
-            </li>
           </ul>
         </div>
     </nav>

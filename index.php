@@ -48,13 +48,25 @@
                   <a class="dropdown-item" href="./wlStats.php">Weight Loss</a>
                 </div>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link' href='./about.html'>About</a>
-            </li>
           </ul>
         </div>
     </nav>
-    <div class="bg-light" style="max-width: 100%; height: 200px;"></div>
+    <div class="bg-light" style="max-width: 100%; height: 200px; padding: 40px 100px 15px 100px;">
+        <center>
+            As i am a freak about metrics and continuous improvement, i made this little side project to keep track of the stuff i'm into like how many hours i code, how many commits i do, how many pages i read and for how many hours, also i started using some services to create some charts, enjoy! 
+            <br>
+            <br>
+            <p>
+                Also you could <b>follow me</b>, here:
+            </p>
+            <p>
+                <a href="https://github.com/jpromanonet" target="_blank">Github</a> |
+                <a href="https://www.linkedin.com/in/juan-pablo-romano-7919b1127/" target="_blank">Linkedin</a> |
+                <a href="https://medium.com/@jpromanonet" target="_blank">Medium</a> |
+                <a href="https://www.instagram.com/juanp.raven/" target="_blank">Instagram</a> 
+            </p>
+        </center>
+    </div>
     </br>
     <div class='container'>
         <h1>Coding</h1>
