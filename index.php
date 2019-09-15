@@ -54,10 +54,8 @@
           </ul>
         </div>
     </nav>
-
+    <div class="bg-light" style="max-width: 100%; height: 200px;"></div>
     </br>
-    </br>
-
     <div class='container'>
         <h1>Coding</h1>
         <div class='row'>
@@ -282,7 +280,7 @@
         <div class='row'>
             <div class='col-md'>
        
-                <div class='card text-white bg-secondary mb-3 h-100' style='max-width: 100%;'>
+                <div class='card text-white bg-danger mb-3 h-100' style='max-width: 100%;'>
                     <div class='card-header'>Total Mate Times</div>
                         <div class='card-body'>
                             <?php
@@ -306,7 +304,7 @@
         
             <div class='col-md'>
 
-                <div class='card text-white bg-secondary mb-3 h-100' style='max-width: 100%;'>
+                <div class='card text-white bg-danger mb-3 h-100' style='max-width: 100%;'>
                     <div class='card-header'>Total Writing Times</div>
                         <div class='card-body'>
                             <?php
@@ -330,7 +328,7 @@
 
             <div class='col-md'>
 
-                <div class='card text-white bg-secondary mb-3 h-100' style='max-width: 100%;'>
+                <div class='card text-white bg-danger mb-3 h-100' style='max-width: 100%;'>
                     <div class='card-header'>Total Posts</div>
                         <div class='card-body'>
                             <?php
