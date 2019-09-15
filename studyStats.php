@@ -27,10 +27,10 @@
               <a class='nav-link' href='http://jpromano.net/stats'>Home <span class='sr-only'>(current)</span></a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link active' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
+              <a class='nav-link' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://jpromano.net/stats/studyStats.php'>Study</a>
+              <a class='nav-link active' href='http://jpromano.net/stats/studyStats.php'>Study</a>
             </li>
             <li class='nav-item'>
               <a class='nav-link' href='http://jpromano.net/stats/readingStats.php'>Reading</a>
@@ -62,7 +62,7 @@
     <div class='container'>
         <h1 class="bg-info">
 			<center>
-				<b>Coding Metrics!</b>
+				<b>Study Metrics!</b>
 			</center>	
 		</h1>
         <div class='row'>
@@ -76,28 +76,24 @@
 						} 
 
 					$sql = "SELECT *
-								FROM cs_CodingHours";
+								FROM st_General";
 
 					if ($res = $mysqli->query($sql)) { 
 						if ($res->num_rows > 0) { 
 							echo "<table class='table'>"; 
 							echo "<thead class='thead-dark'>"; 
 							echo "<th>Date</th>"; 
-							echo "<th>Project</th>"; 
+							echo "<th>Subject</th>"; 
+							echo "<th>Level</th>"; 
 							echo "<th>Time</th>"; 
-							echo "<th>Commits</th>"; 
-							echo "<th>Language</th>"; 
-							echo "<th>Comments</th>"; 
 							echo "</thead>"; 
 						while ($row = $res->fetch_array()) 
 							{ 
 								echo "<tr>"; 
 								echo "<td>".$row['fecha']."</td>"; 
-								echo "<td>".$row['workProject']."</td>"; 
-								echo "<td>".$row['codingHours']." Hs</td>";
-								echo "<td>".$row['dailyCommits']."</td>";
-								echo "<td>".$row['dayLanguage']."</td>";
-								echo "<td>".$row['dayComments']."</td>";  
+								echo "<td>".$row['studySubject']."</td>"; 
+								echo "<td>".$row['studyLevel']."</td>";
+								echo "<td>".$row['studyHours']." Hs</td>";
 								echo "</tr>"; 
 							} 
 							echo "</table>"; 

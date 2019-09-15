@@ -61,9 +61,9 @@
     <div class='container'>
         <h1>Coding</h1>
         <div class='row'>
-            <div class='col-sm'>
+            <div class='col-md'>
        
-                <div class='card text-white bg-success mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 95%;'>
                     <div class='card-header'>Total Coding Time</div>
                         <div class='card-body'>
                             <?php
@@ -76,7 +76,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalTime']." Hs</h1>";
+                                echo "<center><h1 class='card-title'>".$row['totalTime']." Hs</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -85,9 +85,9 @@
 
             </div>
         
-            <div class='col-sm'>
+            <div class='col-md'>
 
-                <div class='card text-white bg-success mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 95%;'>
                     <div class='card-header'>Total Commits</div>
                         <div class='card-body'>
                             <?php
@@ -100,7 +100,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalCommits']."</h1>";
+                                echo "<center><h1 class='card-title'>".$row['totalCommits']."</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -109,9 +109,9 @@
 
             </div>
 
-            <div class='col-sm'>
+            <div class='col-md'>
 
-                <div class='card text-white bg-success mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-success mb-3' style='max-width: 95%;'>
                     <div class='card-header'>Hottest Language Now</div>
                         <div class='card-body'>
                             <?php
@@ -128,7 +128,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalLang']."</h1>";
+                                echo "<center><h1 class='card-title'>".$row['totalLang']."</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -141,11 +141,67 @@
     </div><!-- /container -->
     </br>
     <div class='container'>
+        <h1>Study</h1>
+        <div class='row'>
+            <div class='col-md'>
+       
+                <div class='card text-white bg-primary mb-3 h-100' style='max-width: 95%;'>
+                    <div class='card-header'>Total Study Time</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlTotalTime = "SELECT CAST(SUM(studyHours) AS DECIMAL(10,1)) AS 'totalTime'
+                                                    FROM st_General";
+                                                     
+                                $res = $mysqli->query($sqlTotalTime);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['totalTime']." Hs</h1></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+        
+            <div class='col-md'>
+
+                <div class='card text-white bg-primary mb-3 h-100' style='max-width: 95%;'>
+                    <div class='card-header'>First Subject Now</div>
+                        <div class='card-body'>
+                            <?php
+                                $mysqli = new mysqli("localhost", "kq000102_pStats", "bo17vereVU", "kq000102_pStats");
+
+                                $sqlFirstSubject = "SELECT studySubject AS 'firstSubject', 
+	                                                         FLOOR(SUM(studyHours)) as 'totalHours'
+       		                                                    FROM st_General
+        			                                                  GROUP BY studyHours
+                		                                              ORDER BY totalHours DESC";
+                                                     
+                                $res = $mysqli->query($sqlFirstSubject);
+                                $res->num_rows > 0;
+                                $row = $res->fetch_array();
+
+                                echo "<center><h1 class='card-title'>".$row['firstSubject']."</h1></center>";
+
+                                $mysqli->close(); 
+                            ?> 
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- /container -->
+    </br>
+    <div class='container'>
         <h1>Work Out</h1>
         <div class='row'>
-            <div class='col-sm'>
+            <div class='col-md'>
        
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-Warning mb-3' style='max-width: 95%;'>
                     <div class='card-header'>Total Running Time</div>
                         <div class='card-body'>
                             <?php
@@ -158,7 +214,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalTime']." Min</h1>";
+                                echo "<center><h1 class='card-title'>".$row['totalTime']." Min</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -167,9 +223,9 @@
 
             </div>
         
-            <div class='col-sm'>
+            <div class='col-md'>
 
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-Warning mb-3' style='max-width: 95%;'>
                     <div class='card-header'>Total Run Kilometers</div>
                         <div class='card-body'>
                             <?php
@@ -182,7 +238,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalKms']." Km</h1>";
+                                echo "<center><h1 class='card-title'>".$row['totalKms']." Km</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -191,9 +247,9 @@
 
             </div>
 
-            <div class='col-sm'>
+            <div class='col-md'>
 
-                <div class='card text-white bg-Warning mb-3' style='max-width: 20rem;'>
+                <div class='card text-white bg-Warning mb-3' style='max-width: 95%;'>
                     <div class='card-header'>Total Weight Loss</div>
                         <div class='card-body'>
                             <?php
@@ -206,7 +262,7 @@
                                 $res->num_rows > 0;
                                 $row = $res->fetch_array();
 
-                                echo "<h1 class='card-title'>".$row['totalWl']." Kg</h1>";
+                                echo "<center><h1 class='card-title'>".$row['totalWl']." Kg</h1></center>";
 
                                 $mysqli->close(); 
                             ?> 
@@ -217,8 +273,8 @@
         
         </div>
     </div><!-- /container -->
-    </br>
-    <footer class="page-footer font-small blue pt-4 bg-light fixed-bottom">
+
+    <footer class="page-footer font-small blue pt-4 bg-light mt-auto">
         <div class="footer-copyright text-center py-3">2019 MIT License |
           <a href="https://github.com/jpromanonet/myProgressStats" target="_blank"> Github</a>
         </div>
