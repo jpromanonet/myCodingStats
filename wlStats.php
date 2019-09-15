@@ -43,9 +43,9 @@
                 Workout
               </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item active" href="http://jpromano.net/stats/runningStats.php">Running</a>
+                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="http://jpromano.net/stats/wlStats.php">Weight Loss</a>
+                  <a class="dropdown-item active" href="http://jpromano.net/stats/wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
@@ -62,7 +62,7 @@
     <div class='container'>
         <h1 class="bg-info">
 			<center>
-				<b>Running Metrics!</b>
+				<b>Weight Loss Metrics!</b>
 			</center>	
 		</h1>
         <div class='row'>
@@ -76,24 +76,24 @@
 						} 
 
 					$sql = "SELECT *
-								FROM wo_Running";
+								FROM wo_WeightLoss";
 
 					if ($res = $mysqli->query($sql)) { 
 						if ($res->num_rows > 0) { 
 							echo "<table class='table'>"; 
 							echo "<thead class='thead-dark'>"; 
 							echo "<th>Date</th>"; 
-							echo "<th>Done</th>"; 
-							echo "<th>Goal</th>"; 
-							echo "<th>Time</th>"; 
+							echo "<th>Now</th>"; 
+							echo "<th>Diference</th>"; 
+							echo "<th>BMI</th>"; 
 							echo "</thead>"; 
 						while ($row = $res->fetch_array()) 
 							{ 
 								echo "<tr>"; 
 								echo "<td>".$row['fecha']."</td>"; 
-								echo "<td>".$row['kmCorridos']." Km</td>"; 
-								echo "<td>".$row['kmObjetivo']." Km</td>";
-								echo "<td>".$row['tiempoCorrido']." Min</td>";  
+								echo "<td>".$row['pesoActual']." Kg</td>"; 
+								echo "<td>".$row['diferenciaPeso']." Kg</td>";
+								echo "<td>".$row['imc']."</td>";  
 								echo "</tr>"; 
 							} 
 							echo "</table>"; 

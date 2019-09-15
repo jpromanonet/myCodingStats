@@ -45,7 +45,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Weight Loss</a>
+                  <a class="dropdown-item" href="http://jpromano.net/stats/wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
@@ -110,7 +110,7 @@
         </div>
     </div><!-- /container -->
 
-    <footer class="page-footer font-small blue pt-4 bg-light fixed-bottom">
+    <footer class="page-footer font-small blue pt-4 bg-light mt-auto">
         <div class="footer-copyright text-center py-3">2019 MIT License |
           <a href="https://github.com/jpromanonet/myProgressStats" target="_blank"> Github</a>
       </div>

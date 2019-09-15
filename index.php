@@ -45,7 +45,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Weight Loss</a>
+                  <a class="dropdown-item" href="wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
