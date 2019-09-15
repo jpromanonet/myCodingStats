@@ -24,32 +24,32 @@
         <div class='collapse navbar-collapse' id='navbarColor03'>
           <ul class='navbar-nav ml-auto'>
             <li class='nav-item '>
-              <a class='nav-link' href='http://jpromano.net/stats'>Home <span class='sr-only'>(current)</span></a>
+              <a class='nav-link' href='http://stats.jpromano.net'>Home <span class='sr-only'>(current)</span></a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link active' href='http://jpromano.net/stats/codingStats.php'>Coding</a>
+              <a class='nav-link active' href='http://stats.jpromano.net/codingStats.php'>Coding</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://jpromano.net/stats/studyStats.php'>Study</a>
+              <a class='nav-link' href='http://stats.jpromano.net/studyStats.php'>Study</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://jpromano.net/stats/readingStats.php'>Reading</a>
+              <a class='nav-link' href='http://stats.jpromano.net/readingStats.php'>Reading</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://jpromano.net/stats/blogStats.php'>Blog</a>
+              <a class='nav-link' href='http://stats.jpromano.net/blogStats.php'>Blog</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Workout
               </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="http://jpromano.net/stats/runningStats.php">Running</a>
+                  <a class="dropdown-item" href="http://stats.jpromano.net/runningStats.php">Running</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="http://jpromano.net/stats/wlStats.php">Weight Loss</a>
+                  <a class="dropdown-item" href="http://stats.jpromano.net/wlStats.php">Weight Loss</a>
                 </div>
             </li>
             <li class='nav-item'>
-              <a class='nav-link' href='http://jpromano.net/stats/about.html'>About</a>
+              <a class='nav-link' href='http://stats.jpromano.net/about.html'>About</a>
             </li>
           </ul>
         </div>
@@ -79,6 +79,31 @@
                 </center>
                 <figure>
                   <embed src="https://wakatime.com/share/@jpromanonet/33d9205a-4c25-43b8-8b80-a330d4365464.svg"></embed>
+                </figure>
+            </div>
+        </div>
+    </div><!-- /container -->
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md'>
+                <center>
+                  <h4 class="bg-info">
+                    Code editors over last year
+                  </h4>
+                </center>
+                <figure>
+                  <embed src="https://wakatime.com/share/@jpromanonet/aee5689d-8716-4514-b2c3-ab04cfe8f18a.svg"></embed>
+                </figure>
+            </div>
+        
+            <div class='col-md'>
+                <center>
+                  <h4 class="bg-info">
+                    OS over the last year
+                  </h4>
+                </center>
+                <figure>
+                  <embed src="https://wakatime.com/share/@jpromanonet/87a8f35d-e825-4685-8b8d-9d571bac394b.svg"></embed>
                 </figure>
             </div>
         </div>
