@@ -133,7 +133,7 @@
             	                                                        WHERE codingHours != 1307
         			                                                        GROUP BY dayLanguage
                                                                                 ORDER BY totalHours DESC
-                                                                                    LIMIT 2";
+                                                                                    LIMIT 1";
                                                      
                                 $res = $conn->query($sqlMostUsedLang);
                                 $res->num_rows > 0;
