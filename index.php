@@ -15,7 +15,7 @@
 
   <body>
 
-    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+    <nav class='navbar navbar-expand-lg navbar-dark bg-dark' style="padding-right: 5em;">
         <a class='navbar-brand' href='http://jpromano.net'>Jpromano.net</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarColor03' aria-controls='navbarColor03' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
@@ -186,11 +186,12 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlFirstSubject = "SELECT studySubject AS 'firstSubject', 
+                                $sqlFirstSubject = "SELECT MAX(studySubject) AS 'firstSubject', 
 	                                                         FLOOR(SUM(studyHours)) as 'totalHours'
        		                                                    FROM st_General
-        			                                                  GROUP BY studyHours
-                		                                              ORDER BY totalHours DESC";
+        			                                                  GROUP BY studySubject
+                                                                        ORDER BY totalHours DESC
+                                                                            LIMIT 1";
                                                      
                                 $res = $conn->query($sqlFirstSubject);
                                 $res->num_rows > 0;

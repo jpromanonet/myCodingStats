@@ -16,7 +16,7 @@
 
   <body>
 
-        <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark' style="padding-right: 5em;">
         <a class='navbar-brand' href='http://jpromano.net'>Jpromano.net</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarColor03' aria-controls='navbarColor03' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
