@@ -127,12 +127,13 @@
                             <?php
                                 include('connectDataBase.php');
 
-                                $sqlMostUsedLang = "SELECT dayLanguage AS 'totalLang', 
-	                                                         FLOOR(SUM(codingHours)) as 'totalHours'
-       		                                                    FROM cs_CodingHours
-            	                                                  WHERE codingHours != 1307
-        			                                                    GROUP BY codingHours
-                		                                                ORDER BY totalHours DESC";
+                                $sqlMostUsedLang = "SELECT MAX(dayLanguage) AS 'totalLang', 
+	                                                            FLOOR(SUM(codingHours)) as 'totalHours'
+       		                                                        FROM cs_CodingHours
+            	                                                        WHERE codingHours != 1307
+        			                                                        GROUP BY dayLanguage
+                                                                                ORDER BY totalHours DESC
+                                                                                    LIMIT 1";
                                                      
                                 $res = $conn->query($sqlMostUsedLang);
                                 $res->num_rows > 0;
