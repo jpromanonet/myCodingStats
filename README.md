@@ -1,6 +1,6 @@
 # myCodingStats
 
-My personal improvement stats made with PHP, JS and SQL
+My personal improvement stats made with PHP, JS and SQL, and WakaTime services for charts
 
 ## Sections
 
